@@ -4,6 +4,7 @@ import { useFirstStore } from "../store/FirstStore";
 const firstStore = useFirstStore();
 
 const count = firstStore.count;
+const doubleCount = firstStore.doubleCount;
 
 defineProps({
   msg: {
@@ -18,6 +19,7 @@ defineProps({
     <h1 class="green">{{ msg }}</h1>
     <div>
       <p>Store : count : {{ count }}</p>
+      <p>Getter : doubleCount : {{ doubleCount }}</p>
     </div>
   </div>
 </template>
