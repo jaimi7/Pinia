@@ -12,4 +12,9 @@ export const useFirstStore = defineStore('firstStore', {
         doubleCount: (state) => state.count * 2,
     },
     // actions
+    actions: {
+        increment() {
+            this.count++
+        },
+    },
 })

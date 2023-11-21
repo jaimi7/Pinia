@@ -6,6 +6,8 @@ const firstStore = useFirstStore();
 const count = firstStore.count;
 const doubleCount = firstStore.doubleCount;
 
+firstStore.increment();
+
 defineProps({
   msg: {
     type: String,
@@ -20,6 +22,8 @@ defineProps({
     <div>
       <p>Store : count : {{ count }}</p>
       <p>Getter : doubleCount : {{ doubleCount }}</p>
+      <button @click="firstStore.increment()">Increment</button>
+      <p>Action : Count : {{ firstStore.count }}</p>
     </div>
   </div>
 </template>
