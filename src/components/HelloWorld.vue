@@ -3,7 +3,7 @@ import { useFirstStore } from "../store/FirstStore";
 
 const firstStore = useFirstStore();
 
-console.log(firstStore);
+const count = firstStore.count;
 
 defineProps({
   msg: {
@@ -16,7 +16,9 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <div></div>
+    <div>
+      <p>Store : count : {{ count }}</p>
+    </div>
   </div>
 </template>
 
